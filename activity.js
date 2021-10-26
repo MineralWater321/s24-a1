@@ -26,7 +26,7 @@ db.users.find(
 
 db.users.find( 
 	{$and:[
-		{ "firstName": {$regex: 'e'}} , 
+		{ "firstName": {$regex: 'e', $options: 'i'}} , 
 		{ "age": {$lte: 30}}
 	]}
 );
