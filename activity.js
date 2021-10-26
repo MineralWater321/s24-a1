@@ -4,8 +4,8 @@
 
 db.users.find( 
 	{$or:[
-		{ "firstName": {$regex: 's'}} , 
-		{ "lastName": {$regex: 'd'}}
+		{ "firstName": {$regex: 's', $options: 'i'}} , 
+		{ "lastName": {$regex: 'd', $options: 'i'}}
 	]},
 	{ "_id": 0, "firstName": 1, "lastName": 1 }
 );
